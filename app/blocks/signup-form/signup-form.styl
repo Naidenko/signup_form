@@ -1,0 +1,397 @@
+.registration
+	display flex
+	height 480px
+
+
+.registration__side
+	min-width 137.2px
+	background-color #5A61ED
+	display flex
+	flex-direction column
+	align-items flex-end
+	justify-content flex-end
+
+.side__title
+	margin-right 5.7px
+	width 100%
+
+	font-weight normal
+	font-size 49px
+	line-height 63px
+	letter-spacing 0.5px
+	color #FFFFFF
+	transform rotate(-90deg) translate(58px, 38px)
+	font-family PTSans
+	white-space nowrap
+
+.registration__form
+	background-image url(../images/form-background.svg)
+	background-position bottom right
+	background-repeat no-repeat
+
+.form
+	display flex
+	flex-direction column
+	justify-content space-between
+
+	padding-left 20.8px
+	padding-right 22px
+	padding-top 38.5px
+	padding-bottom 32.48px
+	min-height 480px
+	box-sizing border-box
+
+.form__title
+	margin 0
+	font-family Work Sans
+	font-style normal
+	font-weight 500
+	font-size 22px
+	line-height 26px
+	letter-spacing -0.46px
+	color #111111
+
+.form__text
+	margin-bottom 21px
+
+	font-family: Work Sans;
+	font-style normal
+	font-weight 300
+	font-size 14px
+	line-height 16px
+	color #111111
+
+.form__wrap
+	display flex
+	flex-wrap wrap
+
+.input__wrap
+	display flex
+	flex-direction column
+	width 48%
+	margin-right 15.05px
+
+.input__wrap:nth-child(2n)
+	margin-right 0
+
+.form__label
+.date__legend
+.gender__legend
+	font-family Work Sans
+	font-style normal
+	font-weight 300
+	font-size 12px
+	line-height 14px
+	color #7C7C7C
+
+.form__input
+	padding-top 4.9px
+	padding-bottom 6.3px
+	margin-bottom 16px
+	box-sizing border-box
+
+	font-family Work Sans
+	font-weight 400
+	font-size 14px
+	line-height 16px
+	color: #111111
+	border none
+	border-bottom 0.7px solid #F2F2F2
+	background-color transparent
+
+.form__input:hover
+	border-bottom 0.7px solid #858585
+
+.form__input:focus
+.form__input:active
+	border-bottom 0.7px solid #333333
+
+input[type="text"]::-webkit-input-placeholder
+input[type="email"]::-webkit-input-placeholder
+	font-family Work Sans
+	font-weight 400
+	font-size 14px
+	line-height 16px
+	color: #111111
+
+input[type="text"]:-ms-input-placeholder
+input[type="email"]:-ms-input-placeholder
+	color: #111111
+
+input[type="text"]::-ms-input-placeholder
+input[type="email"]::-ms-input-placeholder
+	color: #111111
+
+input[type="text"]:-moz-placeholder
+input[type="email"]:-moz-placeholder
+	color: #111111
+
+input[type="text"]::-moz-placeholder
+input[type="email"]::-moz-placeholder
+	color: #111111
+
+.select__wrap
+	overflow hidden
+	background url(../images/arrow.svg) no-repeat right
+
+.form__nationality:hover
+.form__day:hover
+.form__month:hover
+.form__year:hover
+	border-bottom 0.7px solid #858585
+
+.form__nationality:focus
+.form__day:focus
+.form__month:focus
+.form__year:focus
+.form__nationality:active
+.form__day:active
+.form__month:active
+.form__year:active
+	border-bottom 0.7px solid #333333
+
+.form__nationality
+	border-radius 0
+	background transparent
+	border 0
+	-webkit-appearance none
+	padding-top 4.9px
+	padding-bottom 6.3px
+	margin-bottom 16px
+
+	font-family Work Sans
+	font-style normal
+	font-weight normal
+	font-size 14px
+	line-height 16px
+	border none
+	border-bottom 0.7px solid #F2F2F2
+
+.email__label
+	position relative
+
+.email__label.correct::after
+	content ''
+	position absolute
+	top 21px
+	right 0
+	width 11px
+	height 8px
+	background-image url(../images/shape.svg)
+	background-position center
+	background-repeat no-repeat
+
+.email__label.error::after
+	content ''
+	position absolute
+	top 21px
+	right 0
+	width 14px
+	height 14px
+	background-image url(../images/cross.svg)
+	background-position center
+	background-repeat no-repeat
+
+.form__date
+	width 48%
+	border none
+	margin-bottom 16.5px
+	margin-right 13.5px
+
+
+.date__wrap
+	display flex
+	flex-direction row
+	justify-content space-between
+
+.form__day
+.form__month
+.form__year
+	border-radius 0
+	background transparent
+	border 0
+	-webkit-appearance none
+	padding-top 5.3px
+	padding-bottom 5.6px
+	width 100%
+
+	font-family Work Sans
+	font-style normal
+	font-weight normal
+	font-size 14px
+	line-height 16px
+	border none
+	border-bottom 0.7px solid #F2F2F2
+
+.select__day
+	width  23.9%
+
+.form__day
+.form__month
+.form__year
+	padding-left 5%
+
+.select__month
+	width 38.8%
+
+.select__year
+	width 28.9%
+
+.form__gender
+	border none
+	width 44%
+	margin-bottom: 16.5px;
+
+.gender__legend
+	margin-bottom 5px
+
+.gender__input
+	position absolute
+	z-index -1
+	opacity 0
+	margin 10px 0 0 7px
+
+.gender__input + .gender__label
+	position relative
+	padding 0 0 0 18px
+	cursor pointer
+
+.gender__input + .gender__label:before
+	content ''
+	position absolute
+	top 3px
+	left 0
+	width 11px
+	height 11px
+	border 0.7px solid #5A61ED
+	border-radius 50%
+	background transparent
+
+.gender__input:hover + .gender__label:before {
+	border 0.8px solid #2d346c
+}
+
+.gender__input + .gender__label:after
+	content: '';
+	position: absolute;
+	top 6.47px
+	left 3px
+	width 6px
+	height 6px
+	border-radius 50%
+	background #5A61ED
+	opacity 0
+	transition .2s
+
+.gender__input:checked + .gender__label:after
+	opacity 1
+
+.gender__label
+	margin-right 16px
+	font-family Work Sans
+	font-style normal
+	font-weight normal
+	font-size 14px
+	line-height 16px
+
+.form__info
+	display flex
+	justify-content space-between
+	align-items center
+
+.form__sign-in
+	font-family Work Sans
+	font-weight 300
+	font-size 13px
+	line-height 15px
+	color #000000
+
+.form__link
+	font-weight 500
+	color #5A61ED
+	text-decoration underline
+	cursor pointer
+
+.form__link:hover
+	color #4249b9
+
+.form__link:focus
+.form__link:active
+	color #30357f
+
+.form__submit
+	margin-right 10px
+	padding-left 25px
+	padding-top 7px
+	padding-right 27px
+	padding-bottom 7px
+
+	font-family PT Sans
+	font-weight 400
+	font-size 14px
+	line-height 18px
+	color #FFFFFF
+
+	border none
+	background-color #5A61ED
+
+@media (max-width: 1279px)
+	.input__wrap
+		width 234.5px
+
+	.form__date
+		width 234.5px
+
+	.select__day
+		width 56px
+
+	.select__month
+		width 91px
+
+	.select__year
+		width 67.67px
+
+	.form__day
+	.form__month
+	.form__year
+		padding-left 0
+
+	.form__submit
+		margin-right 0
+
+
+@media (max-width: 664px)
+	.registration
+		flex-direction column
+
+	.side__title
+		transform rotate(0deg)
+		text-align center
+
+	.input__wrap
+		width 100%
+		margin-right 0
+
+	.form__date
+	.form__gender
+		width 80%
+
+	.select__day
+		width  23.9%
+
+	.form__day
+	.form__month
+	.form__year
+		padding-left 5%
+
+	.select__month
+		width 38.8%
+
+	.select__year
+		width 28.9%
+
+	.form__info
+		flex-direction column
+
+	.form__sign-in
+		margin-bottom 15px

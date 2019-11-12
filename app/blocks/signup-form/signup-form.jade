@@ -1,0 +1,78 @@
+- var months =["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+- var nationalities =["American", "Andorran", "Angolan", "Anguillan", "Citizen of Antigua and Barbuda", "Argentine", "Armenian", "Australian", "Austrian", "Azerbaijani", "Bahamian", "Bahraini", "Bangladeshi", "Barbadian", "Belarusian", "Belgian", "Belizean", "Beninese", "Bermudian", "Bhutanese", "Bolivian", "Citizen of Bosnia and Herzegovina", "Botswanan", "Brazilian", "British", "British Virgin Islander", "Bruneian", "Bulgarian", "Burkinan", "Burmese", "Burundian", "Cambodian", "Cameroonian", "Canadian", "Cape Verdean", "Cayman Islander", "Central African", "Chadian", "Chilean", "Chinese", "Colombian", "Comoran", "Congolese(Congo)", "Congolese(DRC)", "Cook Islander", "Costa Rican", "Croatian", "Cuban", "Cymraes", "Cymro", "Cypriot", "Czech", "Danish", "Djiboutian", "Dominican", "Citizen of the Dominican Republic", "Dutch", "East Timorese", "Ecuadorean", "Egyptian", "Emirati", "English", "Equatorial Guinean", "Eritrean", "Estonian", "Ethiopian", "Faroese", "Fijian", "Filipino", "Finnish", "French", "Gabonese", "Gambian", "Georgian", "German", "Ghanaian", "Gibraltarian", "Greek", "Greenlandic", "Grenadian", "Guamanian", "Guatemalan", "Citizen of Guinea-Bissau", "Guinean", "Guyanese", "Haitian", "Honduran", "Hong Konger", "Hungarian", "Icelandic", "Indian", "Indonesian", "Iranian", "Iraqi", "Irish", "Israeli", "Italian", "Ivorian", "Jamaican", "Japanese", "Jordanian", "Kazakh", "Kenyan", "Kittitian", "Citizen of Kiribati", "Kosovan", "Kuwaiti", "Kyrgyz", "Lao", "Latvian", "Lebanese", "Liberian", "Libyan", "Liechtenstein citizen", "Lithuanian", "Luxembourger", "Macanese", "Macedonian", "Malagasy", "Malawian", "Malaysian", "Maldivian", "Malian", "Maltese", "Marshallese", "Martiniquais", "Mauritanian", "Mauritian", "Mexican", "Micronesian", "Moldovan", "Monegasque", "Mongolian", "Montenegrin", "Montserratian", "Moroccan", "Mosotho", "Mozambican", "Namibian", "Nauruan", "Nepalese", "New Zealander", "Nicaraguan", "Nigerian", "Nigerien", "Niuean", "North Korean", "Northern Irish", "Norwegian", "Omani", "Pakistani", "Palauan", "Palestinian", "Panamanian", "Papua New Guinean", "Paraguayan", "Peruvian", "Pitcairn Islander", "Polish", "Portuguese", "Prydeinig", "Puerto Rican", "Qatari", "Romanian", "Russian", "Rwandan", "Salvadorean", "Sammarinese", "Samoan", "Sao Tomean", "Saudi Arabian", "Scottish", "Senegalese", "Serbian", "Citizen of Seychelles", "Sierra Leonean", "Singaporean", "Slovak", "Slovenian", "Solomon Islander", "Somali", "South African", "South Korean", "South Sudanese", "Spanish", "Sri Lankan", "St Helenian", "St Lucian", "Stateless", "Sudanese", "Surinamese", "Swazi", "Swedish", "Swiss", "Syrian", "Taiwanese", "Tajik", "Tanzanian", "Thai", "Togolese", "Tongan", "Trinidadian", "Tristanian", "Tunisian", "Turkish", "Turkmen", "Turks and Caicos Islander", "Tuvaluan", "Ugandan", "Ukrainian", "Uruguayan", "Uzbek", "Vatican citizen", "Citizen of Vanuatu", "Venezuelan", "Vietnamese", "Vincentian", "Wallisian", "Welsh", "Yemeni", "Zambian", "Zimbabwean"]
+
+section.registration
+	div.registration__side
+		h2.side__title Sign up
+	div.registration__form
+		form.form(method='post' action='#' )
+			div.form__position
+				h3.form__title New user?
+				p.form__text Use the form below to create your account.
+				div.form__wrap
+					div.input__wrap
+						label.form__label(for='FirstName') First Name
+						input.form__input(type='text' name='FirstName' id='FirstName' placeholder='Alice')
+
+					div.input__wrap
+						label.form__label(for='LastName') Last Name
+						input.form__input(type='text' name='LastName' id='LastName' placeholder='Miller')
+
+					div.input__wrap.select__wrap
+						label.form__label(for='Nationality') Nationality
+						select.form__nationality(id='Nationality' name='nationality')
+							for nationality in nationalities
+								option.form__month= nationality
+
+					div.input__wrap
+						label.form__label.email__label.correct(for='E-mail') E-mail
+						input.form__input.email__input(type='email' name='E-mail' id='E-mail' placeholder='alice.miller@yahoo.com')
+
+					fieldset.form__date
+						legend.date__legend Date of Birth
+						div.date__wrap
+							div.select__wrap.select__day
+								select.form__day(name='day')
+									- for (var i=1; i<=31; i++) {
+										if i===21
+											option(value=i selected)= i
+										else
+											option(value=i)= i
+									- }
+							div.select__wrap.select__month
+								select.form__month(name='month')
+									for month in months
+										if month==="December"
+											option.form__month(selected)= month
+										else
+											option.form__month= month
+							div.select__wrap.select__year
+								select.form__year(name='year')
+									- for (var i=1940; i<=2019; i++) {
+										if i === 1995
+											option(value=i selected)= i
+										else
+											option(value=i)= i
+									- }
+
+					fieldset.form__gender
+						legend.gender__legend Gender
+
+						input.gender__input(type='radio' name='gender' value='Male' id='Male')
+						label.gender__label(for='Male') Male
+
+						input.gender__input(type='radio' name='gender' value='Female' id='Female' checked)
+						label.gender__label(for='Female') Female
+
+					div.input__wrap
+						label.form__label(for='Password') Password
+						input.form__input(type='password' name='Password' id='Password')
+
+					div.input__wrap
+						label.form__label(for='Confirm-Password') Confirm Password
+						input.form__input(type='password' name='Confirm Password' id='Confirm-Password')
+
+			div.form__info
+				p.form__sign-in Have an account?
+					a.form__link Login
+				button.form__submit(type="submit") Complete Signup
