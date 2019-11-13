@@ -1,8 +1,8 @@
 import isEmail from 'validator/lib/isEmail';
 
 function signUpForm() {
-	let emailInput = document.querySelector('.email__input');
-	let	emailLabel = document.querySelector('.email__label');
+	const emailInput = document.querySelector('.email__input');
+	const emailLabel = document.querySelector('.email__label');
 
 	emailInput.addEventListener('input', function (){
 		if (isEmail(this.value)){

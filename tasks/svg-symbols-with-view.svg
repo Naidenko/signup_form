@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg"><% if(defs) {%>
+	<defs>
+		<%= defs %>
+	</defs><% } %>
+	<% let startX = 0 %>
+	<% _.forEach( icons, function( icon ){ %>
+		<symbol id="<%= icon.id %>" viewBox="<%= icon.svg.viewBox %>">
+			<% if (icon.title) {%>
+			<title><%= icon.title %></title><% }%>
+			<%= icon.svg.content %>
+		</symbol>
+		<view id="<%= icon.id %>-view" viewBox="<%= startX %> 0 <%= icon.svg.width %> <%= icon.svg.height %>"></view>
+		<use xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+			 xlink:href="#<%= icon.id %>" width="<%= icon.svg.width %>" height="<%= icon.svg.height %>" x="<%= startX %>" y="0"/>
+		<% startX = startX + icon.svg.width %>
+	<% }); %>
+</svg>

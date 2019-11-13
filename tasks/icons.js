@@ -15,7 +15,8 @@ gulp.task('icons', () => (
 			className: '%f',
 			templates: [
 				path.join(__dirname, '../node_modules/stylus-svg-size-template/svg-size.styl'),
-				'default-svg'
+				path.join(__dirname, 'svg-symbols-with-view.svg'),
+				// 'default-svg'
 			]
 		}))
 		.pipe(gulpIf(/\.styl$/, gulp.dest('app/styles/helpers')))
